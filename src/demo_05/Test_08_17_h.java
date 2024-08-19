@@ -11,11 +11,6 @@ public class Test_08_17_h
 			Interface save = Calc17.create();
 				save.execute();
 				
-		});
-		
-		
-		
+		});	
 	}
-	
-	
 }

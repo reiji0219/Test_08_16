@@ -27,7 +27,6 @@ public class Calc17 extends Item17
 				item.execute();
 				
 			});
-
 		};
 	}
 	
@@ -42,13 +41,5 @@ public class Calc17 extends Item17
 		inter.execute();
 		
 		indi( "end" );
-	}
-	
-	
-	
-	
-	
-	
-	
-	
+	}	
 }
