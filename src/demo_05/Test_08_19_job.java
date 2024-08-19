@@ -10,11 +10,6 @@ public class Test_08_19_job
 			Interface save = Calc19.create();
 				save.execute();
 		});
-		
-		
-		
-
-			}
 	
-	
+	}
 }
