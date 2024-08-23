@@ -2,8 +2,13 @@ package demo_05;
 
 import java.util.function.Consumer;
 
-public class Item23
+public class Item23 implements Interface
 {
+	@Override
+	public void execute() {
+		indi( "Lambda" );
+	}
+	
 	private String id;
 	private String name;
 	private double price;
