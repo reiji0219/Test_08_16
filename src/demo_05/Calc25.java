@@ -12,7 +12,6 @@ public class Calc25 extends Item25
 	public static Interface create() {
 		return() -> {
 			Calc25 calc = new Calc25( "Poly-morohism" );
-
 			Item25.save( item -> {
 				item.id( "掛け算" )
 					  .name( "税込み価格" )
@@ -20,13 +19,10 @@ public class Calc25 extends Item25
 					  .tax( 1.1 )
 					  .calc( calc ); 
 
-				System.out.println( "計算式 :" + item.getId());
-				
+				indi( "計算式 :" + item.getId());
 				item.display();
-				
 				item.execute();
 			});
-
 		};
 	}
 	
@@ -37,10 +33,7 @@ public class Calc25 extends Item25
 	
 	public void process( Interface inter ) {
 		indi( "start" );
-		
-		inter.execute();
-		
-		indi( "end" );
+			inter.execute();
+				indi( "end" );
 	}
-	
 }
