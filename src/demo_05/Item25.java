@@ -1,20 +1,20 @@
 package demo_05;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.Iterator;
 import java.util.function.Consumer;
 
 public class Item25 implements Interface
-{
-	@Override
-	public void execute() {
-		indi( "Lambda" );
-		
-	}
-	
+{	
 	private String id;
 	private String name;
 	private double price;
 	private double tax; 
 	private Calc25 calc;
+	
 	
 	public Item25() {
 		
@@ -59,7 +59,42 @@ public class Item25 implements Interface
 		calc.display();
 	}
 	
-	
+	@Override
+	public void execute() {
+		indi( "Lambda" );
+		
+		ArrayList<String> animals = new ArrayList<String>( Arrays.asList( "Dog" ));
+		
+		ArrayList<String> animal = new ArrayList<String>();
+			animal.add( "Cat" );
+			animal.add( "Phenix" );
+			animal.add( "Lion" );
+			
+		String getAnimal = animal.get( 1 );
+			indi( getAnimal );
+			
+			animals.addAll( animal );
+			
+			animals.set( 2, "Fox" );
+			animals.remove( 1 );
+			animals.add( 1, "Elephant" );
+			
+			Comparator<String> compa = new Comparator<String>() {
+				@Override
+				public int compare( String o1, String o2 ) {
+					return( o2.compareTo( o1 ));
+				}
+			};
+			
+			Collections.sort( animals, compa );
+			
+			Iterator<String> itera = animals.iterator();
+			while( itera.hasNext()) {
+				String hoge = itera.next();
+					indi( hoge );
+			}
+		
+	}
 	
 	public static double calcTax( double price, double tax ) {
 		return( price * tax );
