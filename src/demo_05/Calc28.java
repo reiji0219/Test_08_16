@@ -26,7 +26,6 @@ public class Calc28 extends Item28
 				
 				item.execute();
 			});
-
 		};
 	}
 	

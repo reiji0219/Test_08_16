@@ -63,14 +63,11 @@ public class Item28 implements Interface
 	public static double calcTax( double price, double tax ) {
 		return( price * tax );
 	}
-	
-	
 	@Override
 	public String toString() {
 		return "Item28 [id=" + id + ", name=" + name + ", price=" + price + ", tax=" + tax + "]";
 	}
 	public static void indi( String s0 ) {
 		System.out.println( s0 );
-	}
-	
+	}	
 }
